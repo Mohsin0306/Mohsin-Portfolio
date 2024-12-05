@@ -75,10 +75,13 @@ button:focus-visible {
   html {
     scroll-behavior: smooth;
     @apply antialiased;
+    @apply text-base;
+    -webkit-text-size-adjust: 100%;
   }
 
   body {
     @apply text-gray-900 bg-gray-50;
+    @apply m-0 overflow-x-hidden min-h-screen;
   }
 
   /* Custom Scrollbar Styles */
@@ -110,14 +113,17 @@ button:focus-visible {
 @layer components {
   .btn {
     @apply inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200;
+    @apply inline-flex items-center justify-center rounded-lg font-medium transition-colors duration-200;
   }
 
   .btn-primary {
     @apply bg-primary text-white hover:bg-primary/90 shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30 hover:-translate-y-0.5;
+    @apply bg-primary text-white hover:bg-primary/90;
   }
 
   .btn-outline {
     @apply border-2 border-primary text-primary hover:bg-primary hover:text-white shadow-lg shadow-transparent hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5;
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white;
   }
 
   .gradient-text {
@@ -139,6 +145,10 @@ button:focus-visible {
 
   .hover-card {
     @apply transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .container {
+    @apply px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl;
   }
 }
 
@@ -176,6 +186,29 @@ button:focus-visible {
 
   .text-glow {
     text-shadow: 0 0 10px rgba(var(--primary-rgb), 0.5);
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .container {
+    @apply px-4;
+  }
+  
+  h1 {
+    @apply text-3xl !important;
+  }
+  
+  h2 {
+    @apply text-2xl !important;
+  }
+  
+  .text-xl {
+    @apply text-lg;
   }
 }
 

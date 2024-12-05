@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center py-20 lg:py-0 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center py-12 sm:py-20 lg:py-0 overflow-hidden"
     >
       {/* Animated Background */}
       <div className="absolute inset-0 -z-10">
@@ -28,20 +28,20 @@ const Hero = () => {
       </div>
 
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-center lg:text-left space-y-8"
+            className="text-center lg:text-left space-y-6 lg:space-y-8"
           >
             <div className="space-y-4">
               <motion.h2
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="text-lg text-primary font-medium tracking-wide"
+                className="text-base sm:text-lg text-primary font-medium tracking-wide"
               >
                 Welcome to my portfolio
               </motion.h2>
@@ -49,7 +49,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="text-4xl lg:text-6xl font-bold"
+                className="text-3xl sm:text-4xl lg:text-6xl font-bold"
               >
                 Hi, I'm{" "}
                 <span className="gradient-text relative inline-block">
@@ -66,7 +66,7 @@ const Hero = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-xl lg:text-2xl text-gray-600 h-[40px]"
+                className="text-lg sm:text-xl lg:text-2xl text-gray-600 h-[40px]"
               >
                 <TypeAnimation
                   sequence={roles}
@@ -82,7 +82,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-gray-600 text-lg max-w-xl mx-auto lg:mx-0"
+              className="text-base sm:text-lg text-gray-600 max-w-xl mx-auto lg:mx-0"
             >
               Crafting beautiful, functional, and user-friendly digital experiences
               using modern technologies and best practices.
@@ -93,7 +93,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-3 justify-center lg:justify-start"
+              className="flex flex-wrap gap-2 sm:gap-3 justify-center lg:justify-start"
             >
               {['React', 'Node.js', 'MongoDB', 'Express', 'Tailwind'].map((tech, index) => (
                 <motion.span
@@ -101,7 +101,7 @@ const Hero = () => {
                   initial={{ opacity: 0, scale: 0.5 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.7 + index * 0.1 }}
-                  className="px-4 py-2 bg-white/30 backdrop-blur-sm border border-white/20 text-primary rounded-lg text-sm font-medium shadow-lg hover:shadow-xl transition-shadow"
+                  className="px-3 sm:px-4 py-1.5 sm:py-2 bg-white/30 backdrop-blur-sm border border-white/20 text-primary rounded-lg text-sm font-medium shadow-lg hover:shadow-xl transition-shadow"
                 >
                   {tech}
                 </motion.span>
@@ -119,7 +119,7 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn btn-primary px-8 py-3"
+                  className="btn btn-primary px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
                 >
                   View Projects
                 </motion.button>
@@ -128,7 +128,7 @@ const Hero = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="btn btn-outline px-8 py-3"
+                  className="btn btn-outline px-6 sm:px-8 py-2.5 sm:py-3 text-sm sm:text-base"
                 >
                   Contact Me
                 </motion.button>
@@ -143,7 +143,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
             className="relative order-first lg:order-last"
           >
-            <div className="relative w-full aspect-square max-w-lg mx-auto">
+            <div className="relative w-full max-w-[280px] sm:max-w-[320px] lg:max-w-lg mx-auto">
               {/* Decorative Elements */}
               <motion.div
                 animate={{

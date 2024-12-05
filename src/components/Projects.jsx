@@ -56,8 +56,8 @@ const Projects = () => {
         "Optimized performance",
       ],
       links: {
-        github: "https://github.com/yourusername/portfolio",
-        live: "https://your-portfolio.com",
+        github: "https://github.com/Mohsin0306/Mohsin-Portfolio",
+        live: "https://mohsin-portfolio-seven.vercel.app/",
       },
     },
   ];
