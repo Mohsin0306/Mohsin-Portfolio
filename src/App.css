@@ -1,0 +1,81 @@
+/* Gradient Text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+/* Glass Card Effect */
+.glass-card {
+  @apply backdrop-blur-lg bg-white/80 shadow-lg;
+}
+
+/* Button Styles */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary/90 focus:ring-4 focus:ring-primary/20;
+}
+
+/* Hover Card Effect */
+.hover-card {
+  @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary/50 rounded-full hover:bg-primary/70;
+}
+
+/* Section Title */
+.section-title {
+  @apply text-3xl font-bold mb-2 relative pb-4;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-1 bg-gradient-to-r from-primary to-secondary rounded-full;
+}
+
+/* Form Focus Effects */
+input:focus, textarea:focus {
+  @apply outline-none ring-2 ring-primary/20 border-primary;
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* Social Icons Hover */
+.social-icon {
+  @apply transition-colors duration-300 hover:text-primary;
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+  .mobile-nav {
+    @apply fixed bottom-0 left-0 right-0 bg-white shadow-lg border-t border-gray-200 py-3;
+  }
+}
+
+/* Responsive Typography */
+@media (max-width: 640px) {
+  .section-title {
+    @apply text-2xl;
+  }
+}
